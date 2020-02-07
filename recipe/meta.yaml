@@ -32,12 +32,14 @@ requirements:
     - {{posix}}zip               # [win]
   host:
     - r-base
+    - r-kernlab
     - r-mass
     - r-segmented
     - r-survival
   run:
     - r-base
     - {{native}}gcc-libs         # [win]
+    - r-kernlab
     - r-mass
     - r-segmented
     - r-survival
