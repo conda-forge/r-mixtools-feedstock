@@ -1,4 +1,4 @@
-{% set version = '1.1.0' %}
+{% set version = "1.2.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -11,11 +11,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/mixtools_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/mixtools/mixtools_{{ version }}.tar.gz
-  sha256: 543fd8d8dc8d4b6079ebf491cf97f27d6225e1a6e65d8fd48553ada23ba88d8f
+  sha256: ef033ef13625209065d26767bf70d129972e6808927f755629f1d70a118b9023
 
 build:
   merge_build_host: True  # [win]
-  number: 1003
+  number: 0
   skip: true  # [win32]
   rpaths:
     - lib/R/lib/
