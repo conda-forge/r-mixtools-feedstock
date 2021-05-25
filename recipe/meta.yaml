@@ -7,7 +7,6 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: mixtools_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/mixtools_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/mixtools/mixtools_{{ version }}.tar.gz
@@ -16,7 +15,6 @@ source:
 build:
   merge_build_host: True  # [win]
   number: 1
-  skip: true  # [win32]
   rpaths:
     - lib/R/lib/
     - lib/
@@ -51,7 +49,7 @@ test:
 
 about:
   home: https://CRAN.R-project.org/package=mixtools
-  license: GPL (>= 2)
+  license: GPL-2.0-or-later
   summary: Analyzes finite mixture models for various parametric and semiparametric settings.  This
     includes mixtures of parametric distributions (normal, multivariate normal, multinomial,
     gamma), various Reliability Mixture Models (RMMs), mixtures-of-regressions settings
