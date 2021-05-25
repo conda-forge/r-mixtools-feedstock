@@ -3,7 +3,7 @@ About r-mixtools
 
 Home: https://CRAN.R-project.org/package=mixtools
 
-Package license: GPL (>= 2)
+Package license: GPL-2.0-or-later
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-mixtools-feedstock/blob/master/LICENSE.txt)
 
