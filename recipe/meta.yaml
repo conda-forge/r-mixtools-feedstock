@@ -14,6 +14,9 @@ source:
 
 build:
   merge_build_host: True  # [win]
+  {% if r_base == "4.3" %}
+  skip: True              # [ppc64le]
+  {% endif %}
   number: 1
   rpaths:
     - lib/R/lib/
@@ -21,8 +24,8 @@ build:
 
 requirements:
   build:
-    - {{ compiler('c') }}              # [not win]
-    - {{ compiler('m2w64_c') }}        # [win]
+    - {{ compiler('c') }}          # [not win]
+    - {{ compiler('m2w64_c') }}    # [win]
     - {{ posix }}filesystem        # [win]
     - {{ posix }}make
     - {{ posix }}sed               # [win]
